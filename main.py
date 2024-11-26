@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import requests
 import methods 
+import api
 import os
 
 load_dotenv("key.env")
@@ -8,15 +9,14 @@ api_key = os.getenv("API_KEY")
 
 while True:
     location = input("Enter The Location (Example: London): ")
-    url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}?key={api_key}"
-    requestWeather = requests.get(url)
-    print(requestWeather.status_code)
-    
-    if requestWeather.status_code == 200: 
-        responseJson = requestWeather.json()
+    responseJson = api.fetchAndStore(location)
+
+    if responseJson:
         break
     else:
         print("Wron location again enter")
+
+
 
 while True:
     print("Daily weather : 1")
