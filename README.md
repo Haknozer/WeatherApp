@@ -77,7 +77,7 @@ HOURLY WEATHER
 <h2>Installation</h2>
 <ol>
     <li>Clone this repository:
-        <pre><code>git clone https://github.com/your-username/weather-forecast-app.git</code></pre>
+        <pre><code>git clone https://github.com/Haknozer/WeatherApp.git</code></pre>
     </li>
 </ol>
 
